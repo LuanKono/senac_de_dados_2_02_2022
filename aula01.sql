@@ -81,6 +81,70 @@ VALUES
 
 /*-----------------------------------------------------------*/
 SELECT
+    "Select specific columns! --version 00" AS "INFO";
+
+/*-----------------------------------------------------------*/
+SELECT
     *
 FROM
     students;
+
+/*-----------------------------------------------------------*/
+SELECT
+    "Select specific columns! --version 01" AS "INFO";
+
+/*-----------------------------------------------------------*/
+SELECT
+    first_name,
+    last_name,
+    gender
+FROM
+    students;
+
+/*-----------------------------------------------------------*/
+SELECT
+    "Select specific columns! --version 02" AS "INFO";
+
+/*-----------------------------------------------------------*/
+SELECT
+    students.first_name,
+    students.last_name,
+    students.gender
+FROM
+    students;
+
+/*-----------------------------------------------------------*/
+SELECT
+    "Select specific columns! --version 03" AS "INFO";
+
+/*-----------------------------------------------------------*/
+SELECT
+    aula1.students.first_name,
+    aula1.students.last_name,
+    aula1.students.gender
+FROM
+    aula1.students;
+
+/*-----------------------------------------------------------*/
+SELECT
+    "Select specific columns! --version 04" AS "INFO";
+
+/*-----------------------------------------------------------*/
+SELECT
+    aula1.students.first_name as primeiro_nome,
+    aula1.students.last_name as segundo_nome,
+    aula1.students.gender as sexo
+FROM
+    aula1.students;
+
+/*-----------------------------------------------------------*/
+SELECT
+    "Select specific columns! --version 05" AS "INFO";
+
+/*-----------------------------------------------------------*/
+SELECT
+    students.first_name as primeiro_nome,
+    students.last_name as segundo_nome,
+    students.gender as sexo
+FROM
+    students WHERE students.first_name = 'Ernani';
